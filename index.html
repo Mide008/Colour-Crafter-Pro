@@ -329,6 +329,81 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;heigh
 @media(max-width:960px){.mob-fab{display:flex}}
 @keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 .fi{animation:fi .35s ease forwards}
+/* ── Three-Tier Token Architecture ── */
+.ds-tier-nav{display:flex;border-bottom:1px solid var(--border);margin-bottom:14px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.ds-tier-nav::-webkit-scrollbar{display:none}
+.ds-tier-btn{padding:8px 14px;font-family:var(--fm);font-size:.72rem;font-weight:500;color:var(--text-3);background:transparent;border:none;border-bottom:2px solid transparent;cursor:pointer;transition:all var(--t);white-space:nowrap;flex-shrink:0}
+.ds-tier-btn:hover{color:var(--text)}
+.ds-tier-btn.on{color:var(--accent);border-bottom-color:var(--accent);font-weight:700}
+.ds-prim-wrap{display:flex;flex-direction:column;gap:10px}
+.ds-prim-row{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--rs);overflow:hidden}
+.ds-prim-hd{padding:8px 12px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);background:var(--surface-3);gap:8px}
+.ds-prim-name-inp{font-family:var(--fd);font-size:.82rem;font-weight:700;background:transparent;border:none;border-bottom:1px dashed transparent;outline:none;color:var(--text);min-width:0;transition:border-color var(--t)}
+.ds-prim-name-inp:focus{border-bottom-color:var(--accent)}
+.ds-prim-scale{display:flex;height:54px}
+.ds-prim-step{flex:1;cursor:pointer;position:relative;display:flex;align-items:flex-end;justify-content:center;padding-bottom:4px;transition:flex var(--ts);min-width:0}
+.ds-prim-step:hover{flex:1.6}
+.ds-prim-lbl{font-family:var(--fm);font-size:.52rem;mix-blend-mode:difference;color:#fff;font-weight:600;pointer-events:none;white-space:nowrap}
+.ds-prim-step:hover .ds-prim-lbl{font-size:.56rem}
+/* Semantic tier */
+.ds-sem-table{display:flex;flex-direction:column;gap:6px}
+.ds-sem-hdr{display:grid;grid-template-columns:1.2fr 1fr 1fr 24px;gap:8px;padding:0 11px 6px;border-bottom:1px solid var(--border);margin-bottom:4px}
+@media(max-width:640px){.ds-sem-hdr{display:none}}
+.ds-sem-hdr-lbl{font-family:var(--fm);font-size:.58rem;text-transform:uppercase;letter-spacing:.08em;color:var(--text-3)}
+.ds-sem-row{display:grid;grid-template-columns:1.2fr 1fr 1fr 24px;gap:8px;align-items:center;background:var(--surface-2);border:1px solid var(--border);border-radius:var(--rs);padding:8px 11px;transition:border-color var(--t)}
+.ds-sem-row:hover{border-color:var(--border-s)}
+@media(max-width:640px){.ds-sem-row{grid-template-columns:1fr 1fr;row-gap:6px}}
+.ds-sem-name{font-family:var(--fm);font-size:.72rem;color:var(--text);background:transparent;border:none;border-bottom:1px dashed transparent;outline:none;transition:border-color var(--t);width:100%;min-width:0}
+.ds-sem-name:focus{border-bottom-color:var(--accent)}
+.ds-ref-wrap{display:flex;align-items:center;gap:5px;min-width:0}
+.ds-ref-sw{width:18px;height:18px;border-radius:4px;flex-shrink:0;border:1px solid var(--border-s);cursor:pointer;transition:transform var(--t)}
+.ds-ref-sw:hover{transform:scale(1.15)}
+.ds-ref-sel{flex:1;padding:4px 6px;background:var(--surface);border:1px solid var(--border-s);border-radius:5px;font-family:var(--fm);font-size:.63rem;color:var(--text);cursor:pointer;outline:none;min-width:0;max-width:100%;text-overflow:ellipsis}
+.ds-ref-mode-lbl{font-family:var(--fm);font-size:.55rem;color:var(--text-3);white-space:nowrap}
+/* Component tier */
+.ds-comp-grp{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--rs);overflow:hidden;margin-bottom:8px}
+.ds-comp-grp-hd{padding:8px 12px;background:var(--surface-3);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.ds-comp-grp-name{font-family:var(--fd);font-size:.78rem;font-weight:700}
+.ds-comp-tag{display:inline-block;padding:1px 7px;border-radius:100px;background:var(--surface);font-family:var(--fm);font-size:.58rem;color:var(--text-3);border:1px solid var(--border)}
+.ds-comp-row{display:grid;grid-template-columns:1.2fr 1fr 1fr 24px;gap:8px;align-items:center;padding:8px 11px;border-bottom:1px solid var(--border)}
+.ds-comp-row:last-child{border-bottom:none}
+@media(max-width:640px){.ds-comp-row{grid-template-columns:1fr 1fr;row-gap:6px}}
+/* Contrast Matrix */
+.cx-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:var(--rs);border:1px solid var(--border)}
+.cx-table{border-collapse:collapse;font-family:var(--fm);font-size:.63rem;min-width:100%}
+.cx-table th{padding:8px 10px;background:var(--surface-2);border:1px solid var(--border);font-weight:600;text-align:center;white-space:nowrap;font-size:.6rem;color:var(--text-2)}
+.cx-table td{padding:8px 10px;border:1px solid var(--border);text-align:center;white-space:nowrap;min-width:72px;cursor:pointer;transition:opacity var(--t)}
+.cx-table td:hover{opacity:.75}
+.cx-aaa{background:rgba(34,197,94,.16);color:#15803d}
+.cx-aa{background:rgba(58,134,255,.14);color:#1d4ed8}
+.cx-aala{background:rgba(245,158,11,.14);color:#b45309}
+.cx-fail{background:rgba(239,68,68,.12);color:#b91c1c}
+.cx-self{background:var(--surface-2);color:var(--text-3)}
+[data-theme=dark] .cx-aaa{background:rgba(34,197,94,.12);color:#86efac}
+[data-theme=dark] .cx-aa{background:rgba(58,134,255,.12);color:#93c5fd}
+[data-theme=dark] .cx-aala{background:rgba(245,158,11,.1);color:#fcd34d}
+[data-theme=dark] .cx-fail{background:rgba(239,68,68,.1);color:#fca5a5}
+.cx-dot{display:inline-block;width:10px;height:10px;border-radius:3px;vertical-align:middle;margin-right:3px;flex-shrink:0}
+/* Typography / UI Preview */
+.prev-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+@media(max-width:540px){.prev-grid{grid-template-columns:1fr}}
+.prev-card{border-radius:var(--r);overflow:hidden;box-shadow:var(--sh-md)}
+.prev-card-body{padding:18px}
+.prev-badge{display:inline-block;padding:3px 10px;border-radius:100px;font-size:.72rem;font-weight:600;margin-bottom:10px;letter-spacing:-.01em}
+.prev-h1{font-family:var(--fd);font-size:1.15rem;font-weight:800;margin-bottom:6px;line-height:1.2;letter-spacing:-.02em}
+.prev-p{font-size:.82rem;line-height:1.6;margin-bottom:14px}
+.prev-btns{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:10px}
+.prev-btn-p{padding:8px 16px;border-radius:7px;border:none;font-size:.8rem;font-weight:600;cursor:default}
+.prev-btn-s{padding:8px 16px;border-radius:7px;font-size:.8rem;font-weight:600;cursor:default;background:transparent;border-width:1.5px;border-style:solid}
+.prev-input{padding:9px 11px;border-radius:7px;font-size:.8rem;width:100%;border-width:1.5px;border-style:solid;background:transparent;color:inherit;outline:none}
+.prev-chip-row{display:flex;gap:5px;flex-wrap:wrap;margin-top:8px}
+.prev-chip{padding:2px 9px;border-radius:100px;font-size:.68rem;font-weight:600;border-width:1px;border-style:solid}
+.prev-comp-showcase{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r);padding:16px;margin-top:14px;display:flex;flex-direction:column;gap:12px}
+.prev-comp-row{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+/* Scale naming in shades tab */
+.sh-naming-row{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+/* Export hub enhancements */
+.exp-hub-note{font-family:var(--fm);font-size:.62rem;color:var(--text-3);padding:8px 0;border-bottom:1px solid var(--border);margin-bottom:10px}
 </style>
 </head>
 <body>
@@ -447,6 +522,8 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;heigh
       <button class="tab-btn" data-tab="grads">Gradients</button>
       <button class="tab-btn" data-tab="matches">Matches</button>
       <button class="tab-btn" data-tab="history">History</button>
+      <button class="tab-btn" data-tab="matrix">Contrast</button>
+      <button class="tab-btn" data-tab="preview">UI Preview</button>
     </div>
     <div class="tab-pane on" id="tab-tools">
       <div class="cb-wrap">
@@ -460,13 +537,13 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;heigh
         <div class="ds-top">
           <div class="sec-h" style="margin:0;flex:1">Design Token System</div>
           <div class="ds-top-acts">
-            <button class="btn btn-g btn-sm" id="dsFromPal">&#8592; From Palette</button>
-            <button class="btn btn-g btn-sm" id="dsAddGrp">+ Group</button>
-            <button class="btn btn-g btn-sm" id="dsSave"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Save JSON</button>
+            <button class="btn btn-g btn-sm" id="dsFromPal">&#8592; Seed from Palette</button>
+            <button class="btn btn-g btn-sm" id="dsAddTok">+ Add</button>
+            <button class="btn btn-g btn-sm" id="dsSave"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Save</button>
             <label class="btn btn-g btn-sm" style="cursor:pointer"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>Load<input type="file" id="dsLoad" accept=".json" style="display:none"></label>
           </div>
         </div>
-        <div class="ds-groups" id="dsGroups"><div class="ds-empty">Generate a palette first, then click &#8220;&#8592; From Palette&#8221; to seed your design system, or add groups manually.</div></div>
+        <div class="ds-groups" id="dsGroups"><div class="ds-empty">Generate a palette first, then click &#8220;&#8592; Seed from Palette&#8221; to build a full 3-tier token system — Primitives, Semantic, and Component tokens.</div></div>
       </div>
     </div>
     <div class="tab-pane" id="tab-image">
@@ -488,13 +565,19 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;heigh
     <div class="tab-pane" id="tab-shades">
       <div class="sh-row">
         <div class="sec-h" style="margin:0;flex:1">Tonal Scale</div>
-        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+        <div class="sh-naming-row">
           <select class="sh-sel" id="shSel"></select>
-          <div class="lr-tog" id="lrTog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>Lock Ratio</div>
+          <select class="sh-sel" id="shPreset" title="Scale naming convention">
+            <option value="tailwind">Tailwind (50–950)</option>
+            <option value="material">Material (0–100)</option>
+            <option value="custom">Custom (100–1000)</option>
+          </select>
+          <div class="lr-tog" id="lrTog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>Lock</div>
+          <button class="btn btn-g btn-sm" id="shExportBtn"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></button>
         </div>
       </div>
       <div class="sh-grid" id="shGrid"></div>
-      <p style="font-size:.73rem;color:var(--text-3);margin-top:7px">Click any shade to edit. Lock Ratio redistributes adjacent shades proportionally in OKLCH space.</p>
+      <p style="font-size:.73rem;color:var(--text-3);margin-top:7px">Click any shade to edit. Lock redistributes adjacent shades proportionally in OKLCH space.</p>
     </div>
     <div class="tab-pane" id="tab-grads">
       <div class="sec-h">OKLCH Gradient</div>
@@ -517,6 +600,16 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;heigh
     </div>
     <div class="tab-pane" id="tab-matches"><div class="sec-h">Harmony Suggestions</div><div class="match-grid" id="matchGrid"></div></div>
     <div class="tab-pane" id="tab-history"><div class="sec-h">Recent Palettes</div><div class="hist-grid" id="histGrid"></div></div>
+    <div class="tab-pane" id="tab-matrix">
+      <div class="sec-h">Contrast Matrix</div>
+      <p style="font-size:.73rem;color:var(--text-3);margin-bottom:12px">Every colour pair, every ratio. WCAG AAA ≥7:1 · AA ≥4.5:1 · AA Large ≥3:1. White &amp; near-black included as reference. Click any cell to copy the ratio.</p>
+      <div id="matrixWrap"></div>
+    </div>
+    <div class="tab-pane" id="tab-preview">
+      <div class="sec-h">UI Preview</div>
+      <p style="font-size:.73rem;color:var(--text-3);margin-bottom:12px">Your palette as real interface components — buttons, inputs, badges, cards — in both light and dark contexts.</p>
+      <div id="previewWrap"></div>
+    </div>
   </div>
 </main>
 </div>
@@ -561,14 +654,18 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;heigh
   <div class="mo">
     <div class="mo-hd"><div class="mo-title">Export</div><button class="mo-cl" id="expMoClose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button></div>
     <div class="exp-tabs">
-      <button class="exp-tab on" data-et="css">CSS</button>
+      <button class="exp-tab on" data-et="css">CSS Vars</button>
+      <button class="exp-tab" data-et="cssdark">CSS + Dark</button>
       <button class="exp-tab" data-et="scss">SCSS</button>
-      <button class="exp-tab" data-et="tailwind">Tailwind</button>
-      <button class="exp-tab" data-et="json">JSON</button>
-      <button class="exp-tab" data-et="w3c">W3C Tokens</button>
-      <button class="exp-tab" data-et="figma">Figma Vars</button>
+      <button class="exp-tab" data-et="twv3">Tailwind v3</button>
+      <button class="exp-tab" data-et="twv4">Tailwind v4</button>
+      <button class="exp-tab" data-et="figmatokens">Figma Tokens</button>
+      <button class="exp-tab" data-et="w3c">W3C DTCG</button>
       <button class="exp-tab" data-et="styledic">Style Dict</button>
+      <button class="exp-tab" data-et="json">JSON</button>
       <button class="exp-tab" data-et="oklch">OKLCH CSS</button>
+      <button class="exp-tab" data-et="android">Android XML</button>
+      <button class="exp-tab" data-et="ios">iOS Swift</button>
     </div>
     <div class="code-blk"><button class="code-cp" id="expCp">Copy</button><pre id="expCode"></pre></div>
   </div>
@@ -607,7 +704,20 @@ const C={
   textOnBg(bg){return this.luminance(bg)>0.33?'#0a0a0f':'#f8f7f4'},
   palette(mode,base){const rgb=base?this.hexToRgb(base):this.hexToRgb(this.random());const hsl=this.rgbToHsl(rgb.r,rgb.g,rgb.b);const H=hsl.h,S=Math.max(40,hsl.s),L=Math.max(30,Math.min(65,hsl.l));const mk=(h,s,l)=>{const r=this.hslToRgb((h+360)%360,s,l);return this.rgbToHex(r.r,r.g,r.b)};switch(mode){case'analogous':return[mk(H,S,L),mk(H+30,S-5,L+8),mk(H-30,S-5,L-8),mk(H+60,S-15,L+15),mk(H-60,S-10,L-5)];case'complementary':return[mk(H,S,L),mk(H,S-10,L+20),mk(H+180,S,L),mk(H+180,S-10,L+15),mk(H+90,S-15,L+10)];case'triadic':return[mk(H,S,L),mk(H+120,S,L),mk(H+240,S,L),mk(H+60,S-20,L+15),mk(H+180,S-20,L+10)];case'split':return[mk(H,S,L),mk(H+150,S,L),mk(H+210,S,L),mk(H+180,S-15,L+15),mk(H,S-20,L+20)];case'tetradic':return[mk(H,S,L),mk(H+90,S,L),mk(H+180,S,L),mk(H+270,S,L),mk(H+45,S-10,L+10)];default:return Array.from({length:5},()=>this.random())}},
   adjust(colors,type){return colors.map(hex=>{const rgb=this.hexToRgb(hex);const hsl=this.rgbToHsl(rgb.r,rgb.g,rgb.b);switch(type){case'warmer':hsl.h=(hsl.h-15+360)%360;hsl.s=Math.min(100,hsl.s+5);break;case'cooler':hsl.h=(hsl.h+15)%360;hsl.s=Math.min(100,hsl.s+3);break;case'lighter':hsl.l=Math.min(92,hsl.l+10);break;case'darker':hsl.l=Math.max(8,hsl.l-10);break;case'saturate':hsl.s=Math.min(100,hsl.s+15);break;case'desaturate':hsl.s=Math.max(0,hsl.s-20);break;}const r=this.hslToRgb(hsl.h,hsl.s,hsl.l);return this.rgbToHex(r.r,r.g,r.b)})},
-  applyIntent(colors,intent){const pr={ui:{sm:.75,lo:1.25,le:.8},branding:{sm:1.2,lo:1,le:1},marketing:{sm:1.4,lo:1.1,le:.9},editorial:{sm:.85,lo:1.1,le:.95},wellness:{sm:.7,lo:1.3,le:.9},fintech:{sm:.9,lo:1.15,le:.85}}[intent];if(!pr)return colors;return colors.map((hex,i)=>{const rgb=this.hexToRgb(hex);const hsl=this.rgbToHsl(rgb.r,rgb.g,rgb.b);hsl.s=Math.max(0,Math.min(100,hsl.s*pr.sm));hsl.l=Math.max(5,Math.min(92,hsl.l*(i%2===0?pr.le:pr.lo)));const r=this.hslToRgb(hsl.h,hsl.s,hsl.l);return this.rgbToHex(r.r,r.g,r.b)})},
+  applyIntent(colors,intent){const pr={ui:{sm:.5,lo:1.4,le:.74},branding:{sm:1.65,lo:1.0,le:1.06},marketing:{sm:1.85,lo:1.13,le:.87},editorial:{sm:.52,lo:1.18,le:1.0},wellness:{sm:.42,lo:1.5,le:.80},fintech:{sm:.72,lo:1.28,le:.76}}[intent];if(!pr)return colors;return colors.map((hex,i)=>{const rgb=this.hexToRgb(hex);const hsl=this.rgbToHsl(rgb.r,rgb.g,rgb.b);hsl.s=Math.max(0,Math.min(100,hsl.s*pr.sm));hsl.l=Math.max(5,Math.min(92,hsl.l*(i%2===0?pr.le:pr.lo)));const r=this.hslToRgb(hsl.h,hsl.s,hsl.l);return this.rgbToHex(r.r,r.g,r.b)})},
+  intentDesc:{ui:'UI/Product: Low saturation, high contrast — clean for components & dashboards.',branding:'Branding: Maximum saturation — vivid, unforgettable brand recognition.',marketing:'Marketing: Maximum vibrancy — high-energy, conversion-optimised.',editorial:'Editorial: Desaturated, refined — optimised for long-form reading.',wellness:'Wellness: Soft, airy, desaturated — calming & restorative.',fintech:'Fintech: Cool tones, precise contrast — credible & trust-first.'},
+  oklchScalePreset(hex,preset){
+    const stepsMap={tailwind:[50,100,200,300,400,500,600,700,800,900,950],material:[0,10,20,30,40,50,60,70,80,90,95,99,100],custom:[100,200,300,400,500,600,700,800,900,1000]};
+    const steps=stepsMap[preset]||stepsMap.custom;
+    const{L:bL,C:bC,H:bH}=this.hexToOklch(hex);
+    const n=steps.length;
+    return steps.map((step,i)=>{
+      const t=i/(n-1);
+      const tL=0.97-t*0.87;
+      const tC=bC*(0.12+Math.sin(Math.PI*(1-t))*0.88);
+      return{step,hex:this.oklchToHex(Math.max(0.04,Math.min(0.97,tL)),Math.max(0,tC),bH)};
+    });
+  },
   moodToParams(text){const t=text.toLowerCase();const map=[{k:['ocean','sea','wave','coastal','water','marine'],h:195,s:65,l:45,label:'Oceanic'},{k:['forest','nature','leaf','green','garden','botanical'],h:140,s:55,l:38,label:'Forest'},{k:['sunset','dusk','golden','amber','autumn','fall'],h:28,s:80,l:50,label:'Golden Hour'},{k:['night','dark','noir','mystery','midnight','moon'],h:245,s:30,l:25,label:'Nocturne'},{k:['fire','energy','bold','vibrant','passion','red','hot'],h:5,s:85,l:50,label:'Ignition'},{k:['sky','cloud','air','fresh','light','clean','minimal'],h:210,s:50,l:72,label:'Skylight'},{k:['earth','sand','desert','terracotta','natural'],h:30,s:40,l:55,label:'Earthen'},{k:['lavender','purple','dreamy','soft','gentle','flower'],h:270,s:45,l:65,label:'Lavender'},{k:['startup','tech','digital','future','neon','electric'],h:200,s:90,l:50,label:'Digital'},{k:['luxury','gold','premium','elegant','rich'],h:45,s:70,l:45,label:'Prestige'},{k:['wellness','calm','zen','peace','spa','relax'],h:165,s:35,l:60,label:'Serenity'},{k:['playful','fun','bright','happy','joyful'],h:50,s:85,l:58,label:'Playful'},{k:['vintage','retro','old','nostalgic','faded'],h:35,s:35,l:58,label:'Vintage'},{k:['winter','cold','ice','frost','snow','arctic'],h:210,s:40,l:78,label:'Frost'},{k:['spring','bloom','floral','petal','rose','blossom'],h:340,s:55,l:70,label:'Blossom'},{k:['tokyo','japan','neon','urban','city','metro'],h:300,s:70,l:50,label:'Urban Neon'},{k:['coffee','cafe','cozy','mocha','brown'],h:30,s:45,l:38,label:'Cafe'},{k:['fintech','bank','trust','finance','professional'],h:220,s:60,l:40,label:'Financial'}];for(const m of map){if(m.k.some(k=>t.includes(k)))return m}return{h:Math.random()*360,s:60,l:50,label:'Custom'}},
   brandToParams(text){const t=text.toLowerCase();let h=220,s=65,l=45;if(t.includes('trust')||t.includes('bank')||t.includes('finance')){h=220;s=70;l=38}else if(t.includes('health')||t.includes('medical')||t.includes('wellness')){h=170;s=55;l=45}else if(t.includes('tech')||t.includes('saas')||t.includes('startup')){h=240;s=75;l=50}else if(t.includes('luxury')||t.includes('premium')){h=45;s=50;l=40}else if(t.includes('food')||t.includes('restaurant')||t.includes('cafe')){h=30;s=75;l=48}else if(t.includes('gen z')||t.includes('youth')){h=300;s=80;l=55}else if(t.includes('eco')||t.includes('green')||t.includes('sustain')){h=140;s=60;l=38}else if(t.includes('creative')||t.includes('agency')||t.includes('design')){h=350;s=70;l=50}const mk=(h,s,l)=>{const r=this.hslToRgb((h+360)%360,s,l);return this.rgbToHex(r.r,r.g,r.b)};return[mk(h,s,l),mk(h,s,85),mk((h+180)%360,s*.6,l),mk(h,s*.3,20),mk((h+30)%360,s*.8,l+10)]},
   oklchScale(hex,steps=10){const{L,C,H}=this.hexToOklch(hex);return Array.from({length:steps},(_,i)=>{const t=i/(steps-1);const tL=0.96-t*0.82;const tC=C*(1-t*0.25);return{hex:this.oklchToHex(tL,tC,H),weight:(i+1)*100,L:tL,C:tC,H}})},
@@ -738,83 +848,222 @@ const Picker={
 };
 
 const DS={
-  groups:[],_id:0,
+  primitives:{},semantics:[],components:[],scalePreset:'tailwind',_tier:'primitive',_id:0,
   newId(){return'ds_'+(++this._id)+'_'+Date.now()},
+  getSteps(){return{tailwind:[50,100,200,300,400,500,600,700,800,900,950],material:[0,10,20,30,40,50,60,70,80,90,95,99,100],custom:[100,200,300,400,500,600,700,800,900,1000]}[this.scalePreset]||[100,200,300,400,500,600,700,800,900,1000]},
+  generateScale(hex){const steps=this.getSteps();return steps.reduce((acc,step,i)=>{const s=C.oklchScalePreset(hex,this.scalePreset);acc[step]=s[i]?s[i].hex:hex;return acc},{})},
+  resolveRef(ref,mode){
+    if(!ref)return'#888888';
+    const dotIdx=ref.lastIndexOf('.');
+    if(dotIdx>0){const pname=ref.slice(0,dotIdx);const step=ref.slice(dotIdx+1);if(this.primitives[pname]&&this.primitives[pname][step])return this.primitives[pname][step]}
+    const sem=this.semantics.find(s=>s.name===ref);
+    if(sem)return this.resolveRef(mode==='dark'?sem.darkRef:sem.lightRef,mode);
+    return'#888888'
+  },
+  getPrimOptions(){const opts=[];Object.entries(this.primitives).forEach(([n,sc])=>Object.keys(sc).forEach(s=>opts.push(n+'.'+s)));return opts},
+  getSemOptions(){return this.semantics.map(s=>s.name)},
   initFromPalette(palette,roles){
-    const semantic=[{name:'Success',hex:'#22c55e'},{name:'Warning',hex:'#f59e0b'},{name:'Error',hex:'#ef4444'},{name:'Info',hex:'#3b82f6'}];
-    const brandToks=palette.map((hex,i)=>({id:this.newId(),name:roles[i]?roles[i].charAt(0).toUpperCase()+roles[i].slice(1):'Colour '+(i+1),baseHex:hex,scale:C.oklchScale(hex,10)}));
-    const semToks=semantic.map(s=>({id:this.newId(),name:s.name,baseHex:s.hex,scale:C.oklchScale(s.hex,10)}));
-    this.groups=[{id:this.newId(),name:'Brand',tokens:brandToks},{id:this.newId(),name:'Semantic',tokens:semToks}];
-    this.render();
+    this.primitives={};
+    palette.forEach((hex,i)=>{const n=(roles[i]||'color'+(i+1)).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');this.primitives[n]=this.generateScale(hex)});
+    [['success','#22c55e'],['warning','#f59e0b'],['error','#ef4444'],['info','#3b82f6']].forEach(([n,h])=>{this.primitives[n]=this.generateScale(h)});
+    const steps=this.getSteps();const first=Object.keys(this.primitives)[0];
+    const midI=Math.floor(steps.length*.45);const mid=steps[midI];const nearMid=steps[Math.max(0,midI-1)];
+    const s0=steps[0];const s1=steps[1];const sN=steps[steps.length-1];const sN1=steps[steps.length-2];const sN2=steps[steps.length-3];
+    this.semantics=[
+      {id:this.newId(),name:'brand.primary',lightRef:first+'.'+mid,darkRef:first+'.'+nearMid,type:'color'},
+      {id:this.newId(),name:'brand.subtle',lightRef:first+'.'+s1,darkRef:first+'.'+sN2,type:'color'},
+      {id:this.newId(),name:'surface.page',lightRef:first+'.'+s0,darkRef:first+'.'+sN,type:'background'},
+      {id:this.newId(),name:'surface.card',lightRef:first+'.'+s1,darkRef:first+'.'+sN1,type:'background'},
+      {id:this.newId(),name:'text.primary',lightRef:first+'.'+sN,darkRef:first+'.'+s0,type:'text'},
+      {id:this.newId(),name:'text.secondary',lightRef:first+'.'+sN1,darkRef:first+'.'+s1,type:'text'},
+      {id:this.newId(),name:'border.default',lightRef:first+'.'+steps[2],darkRef:first+'.'+steps[steps.length-4],type:'border'},
+      {id:this.newId(),name:'status.success',lightRef:'success.'+mid,darkRef:'success.'+nearMid,type:'color'},
+      {id:this.newId(),name:'status.warning',lightRef:'warning.'+mid,darkRef:'warning.'+nearMid,type:'color'},
+      {id:this.newId(),name:'status.error',lightRef:'error.'+mid,darkRef:'error.'+nearMid,type:'color'},
+      {id:this.newId(),name:'status.info',lightRef:'info.'+mid,darkRef:'info.'+nearMid,type:'color'},
+    ];
+    this.components=[
+      {id:this.newId(),name:'button.background.primary',lightRef:'brand.primary',darkRef:'brand.primary',group:'Button'},
+      {id:this.newId(),name:'button.text.primary',lightRef:'surface.page',darkRef:'surface.page',group:'Button'},
+      {id:this.newId(),name:'button.border.primary',lightRef:'brand.primary',darkRef:'brand.primary',group:'Button'},
+      {id:this.newId(),name:'input.background',lightRef:'surface.page',darkRef:'surface.page',group:'Input'},
+      {id:this.newId(),name:'input.border',lightRef:'border.default',darkRef:'border.default',group:'Input'},
+      {id:this.newId(),name:'input.text',lightRef:'text.primary',darkRef:'text.primary',group:'Input'},
+      {id:this.newId(),name:'card.background',lightRef:'surface.card',darkRef:'surface.card',group:'Card'},
+      {id:this.newId(),name:'card.border',lightRef:'border.default',darkRef:'border.default',group:'Card'},
+      {id:this.newId(),name:'card.heading',lightRef:'text.primary',darkRef:'text.primary',group:'Card'},
+      {id:this.newId(),name:'badge.background.success',lightRef:'status.success',darkRef:'status.success',group:'Badge'},
+      {id:this.newId(),name:'badge.background.error',lightRef:'status.error',darkRef:'status.error',group:'Badge'},
+    ];
+    this._tier='primitive';this.render();
   },
-  addGroup(){this.groups.push({id:this.newId(),name:'New Group',tokens:[]});this.render();toast('Group added')},
-  deleteGroup(id){this.groups=this.groups.filter(g=>g.id!==id);this.render()},
-  addToken(gid){const g=this.groups.find(g=>g.id===gid);if(!g)return;const hex=C.random();g.tokens.push({id:this.newId(),name:'New Token',baseHex:hex,scale:C.oklchScale(hex,10)});this.render()},
-  deleteToken(tid){this.groups.forEach(g=>{g.tokens=g.tokens.filter(t=>t.id!==tid)});this.render()},
-  updateColor(tid,hex){this.groups.forEach(g=>{const t=g.tokens.find(t=>t.id===tid);if(t){t.baseHex=hex;t.scale=C.oklchScale(hex,10)}});this.render()},
-  updateName(tid,name){this.groups.forEach(g=>{const t=g.tokens.find(t=>t.id===tid);if(t)t.name=name})},
-  updateGroupName(gid,name){const g=this.groups.find(g=>g.id===gid);if(g)g.name=name},
-  toJSON(){return JSON.stringify({version:'1.0',groups:this.groups},null,2)},
+  addPrimitive(){const hex=C.random();const n='custom-'+(Object.keys(this.primitives).length+1);this.primitives[n]=this.generateScale(hex);this.render();toast('Primitive added')},
+  addSemantic(){const opts=this.getPrimOptions();this.semantics.push({id:this.newId(),name:'new.token',lightRef:opts[0]||'',darkRef:opts[opts.length-1]||opts[0]||'',type:'color'});this.render()},
+  addComponent(){const opts=this.getSemOptions();this.components.push({id:this.newId(),name:'component.token',lightRef:opts[0]||'',darkRef:opts[0]||'',group:'Custom'});this.render()},
+  toJSON(){return JSON.stringify({version:'2.0',primitives:this.primitives,semantics:this.semantics,components:this.components,scalePreset:this.scalePreset},null,2)},
   fromJSON(json){
-    try{const d=JSON.parse(json);if(!d.groups)throw new Error();
-    this.groups=d.groups;let mx=0;this.groups.forEach(g=>{const n=parseInt((g.id||'').split('_')[1])||0;if(n>mx)mx=n;g.tokens.forEach(t=>{const m=parseInt((t.id||'').split('_')[1])||0;if(m>mx)mx=m})});this._id=mx;this.render();toast('Design system loaded \u2713')}catch(e){toast('Invalid file')}
+    try{const d=JSON.parse(json);
+    if(d.version==='2.0'){this.primitives=d.primitives||{};this.semantics=d.semantics||[];this.components=d.components||[];this.scalePreset=d.scalePreset||'tailwind'}
+    else if(d.groups){this.primitives={};d.groups.forEach(g=>g.tokens.forEach(t=>{const n=t.name.toLowerCase().replace(/\W+/g,'-');this.primitives[n]={};t.scale.forEach((s,i)=>{this.primitives[n][(i+1)*100]=s.hex})}));this.semantics=[];this.components=[]}
+    this.render();toast('Design system loaded \u2713')}catch(e){toast('Invalid file')}
   },
-  exportStyleDict(){
-    const out={color:{}};
-    this.groups.forEach(g=>{const gk=g.name.toLowerCase().replace(/\s+/g,'_');out.color[gk]={};g.tokens.forEach(t=>{const tk=t.name.toLowerCase().replace(/\s+/g,'_');out.color[gk][tk]={};t.scale.forEach((s,i)=>{out.color[gk][tk][(i+1)*100]={value:s.hex,$type:'color',comment:C.oklchCss(s.hex)}})})});
-    return JSON.stringify(out,null,2);
-  },
-  exportFigma(){
-    const vars=[];
-    this.groups.forEach(g=>{g.tokens.forEach(t=>{const rgb=C.hexToRgb(t.baseHex);vars.push({name:g.name+'/'+t.name+'/base',type:'COLOR',values:[{mode:'Light',value:{r:+(rgb.r/255).toFixed(4),g:+(rgb.g/255).toFixed(4),b:+(rgb.b/255).toFixed(4),a:1}}]});t.scale.forEach((s,i)=>{const rgb2=C.hexToRgb(s.hex);vars.push({name:g.name+'/'+t.name+'/'+(i+1)*100,type:'COLOR',values:[{mode:'Light',value:{r:+(rgb2.r/255).toFixed(4),g:+(rgb2.g/255).toFixed(4),b:+(rgb2.b/255).toFixed(4),a:1}}]})})})});
-    return JSON.stringify({version:'0.0.1',collections:[{name:'Colour System',modes:[{name:'Light'}],variables:vars}]},null,2);
+  /* ── Exports ── */
+  exportFigmaTokens(){
+    const out={primitives:{},semantic:{},component:{},$metadata:{tokenSetOrder:['primitives','semantic','component']}};
+    Object.entries(this.primitives).forEach(([n,sc])=>{out.primitives[n]={};Object.entries(sc).forEach(([s,h])=>{out.primitives[n][s]={$value:h,$type:'color',$description:C.oklchCss(h)}})});
+    this.semantics.forEach(s=>{let node=out.semantic;s.name.split('.').forEach((p,i,a)=>{if(i<a.length-1){node[p]=node[p]||{};node=node[p]}else node[p]={$value:'{primitives.'+s.lightRef+'}',$type:'color',$description:'Dark: {primitives.'+s.darkRef+'}'}})});
+    this.components.forEach(c=>{let node=out.component;c.name.split('.').forEach((p,i,a)=>{if(i<a.length-1){node[p]=node[p]||{};node=node[p]}else node[p]={$value:'{semantic.'+c.lightRef+'}',$type:'color'}})});
+    return JSON.stringify(out,null,2)
   },
   exportW3C(){
-    const out={};
-    this.groups.forEach(g=>{const gk=g.name.toLowerCase().replace(/\s+/g,'-');out[gk]={};g.tokens.forEach(t=>{const tk=t.name.toLowerCase().replace(/\s+/g,'-');out[gk][tk]={'$value':t.baseHex,'$type':'color','$description':C.oklchCss(t.baseHex)}})});
-    return JSON.stringify(out,null,2);
+    const out={$metadata:{tokenSetOrder:['primitives','semantic','component']},primitives:{},semantic:{},component:{}};
+    Object.entries(this.primitives).forEach(([n,sc])=>{out.primitives[n]={};Object.entries(sc).forEach(([s,h])=>{out.primitives[n][s]={$value:h,$type:'color',$description:C.oklchCss(h)}})});
+    this.semantics.forEach(s=>{let node=out.semantic;s.name.split('.').forEach((p,i,a)=>{if(i<a.length-1){node[p]=node[p]||{};node=node[p]}else node[p]={$value:'{primitives.'+s.lightRef+'}',$type:'color',$description:'Dark mode: {primitives.'+s.darkRef+'}'}})});
+    return JSON.stringify(out,null,2)
   },
-  exportOklchCSS(){
-    const lines=[':root {'];
-    this.groups.forEach(g=>{const gk=g.name.toLowerCase().replace(/\s+/g,'-');lines.push('  /* -- '+g.name+' -- */');g.tokens.forEach(t=>{const tk=t.name.toLowerCase().replace(/\s+/g,'-');lines.push('  --'+gk+'-'+tk+': '+C.oklchCss(t.baseHex)+';');t.scale.forEach((s,i)=>{lines.push('  --'+gk+'-'+tk+'-'+(i+1)*100+': '+C.oklchCss(s.hex)+';')})})});
-    lines.push('}');return lines.join('\n');
+  exportCSSDark(){
+    const lLines=[':root {','  /* Generated by Colour Crafter Pro — Semantic Tokens */'];
+    const dLines=['[data-theme="dark"] {'];
+    this.semantics.forEach(s=>{const v='--'+s.name.replace(/\./g,'-');const lh=this.resolveRef(s.lightRef,'light');const dh=this.resolveRef(s.darkRef,'dark');lLines.push('  '+v+': '+lh+';');dLines.push('  '+v+': '+dh+';')});
+    lLines.push('\n  /* Primitive Scale */');
+    Object.entries(this.primitives).forEach(([n,sc])=>{lLines.push('  /* '+n+' */');Object.entries(sc).forEach(([s,h])=>lLines.push('  --'+n+'-'+s+': '+h+';'))});
+    lLines.push('}');dLines.push('}');
+    return[...lLines,'','',...dLines].join('\n')
   },
+  exportTailwindV3(){
+    const colors={};Object.entries(this.primitives).forEach(([n,sc])=>{colors[n]={};Object.entries(sc).forEach(([s,h])=>{colors[n][s]=h})});
+    const colStr=JSON.stringify(colors,null,8).replace(/"(\w)/g,(m,p)=>p);
+    return'/** @type {import(\'tailwindcss\').Config} */\nmodule.exports = {\n  theme: {\n    extend: {\n      colors: '+colStr+'\n    }\n  }\n}'
+  },
+  exportTailwindV4(){
+    const lines=['@theme {',' /* Colour Crafter Pro — Tailwind v4 CSS-first config */',''];
+    Object.entries(this.primitives).forEach(([n,sc])=>{lines.push('  /* '+n+' */');Object.entries(sc).forEach(([s,h])=>lines.push('  --color-'+n+'-'+s+': '+h+';'));lines.push('')});
+    lines.push('  /* Semantic tokens */');
+    this.semantics.forEach(s=>{const lh=this.resolveRef(s.lightRef,'light');lines.push('  --color-'+s.name.replace(/\./g,'-')+': '+lh+';')});
+    lines.push('}');return lines.join('\n')
+  },
+  exportAndroidXML(){
+    const lines=['<?xml version="1.0" encoding="utf-8"?>','<resources>','  <!-- Generated by Colour Crafter Pro -->'];
+    Object.entries(this.primitives).forEach(([n,sc])=>{lines.push('  <!-- '+n+' -->');Object.entries(sc).forEach(([s,h])=>lines.push('  <color name="'+n+'_'+s+'">#FF'+h.slice(1).toUpperCase()+'</color>'))});
+    lines.push('  <!-- Semantic Tokens -->');
+    this.semantics.forEach(s=>{const h=this.resolveRef(s.lightRef,'light');lines.push('  <color name="'+s.name.replace(/\./g,'_')+'">#FF'+h.slice(1).toUpperCase()+'</color>')});
+    lines.push('</resources>');return lines.join('\n')
+  },
+  exportIOSSwift(){
+    const lines=['// Generated by Colour Crafter Pro','import SwiftUI','','extension Color {','  // MARK: – Primitive Scales'];
+    Object.entries(this.primitives).forEach(([n,sc])=>{lines.push('  // '+n);Object.entries(sc).forEach(([s,h])=>{const rgb=C.hexToRgb(h);const vn=n.replace(/-([a-z])/g,(m,c)=>c.toUpperCase())+s;lines.push('  static let '+vn+' = Color(red: '+(rgb.r/255).toFixed(4)+', green: '+(rgb.g/255).toFixed(4)+', blue: '+(rgb.b/255).toFixed(4)+')')})});
+    lines.push('','  // MARK: – Semantic Tokens');
+    this.semantics.forEach(s=>{const vn=s.name.replace(/\./g,'_').replace(/-([a-z])/g,(m,c)=>c.toUpperCase());const lh=this.resolveRef(s.lightRef,'light');const dh=this.resolveRef(s.darkRef,'dark');const lr=C.hexToRgb(lh);const dr=C.hexToRgb(dh);lines.push('  static let '+vn+' = Color(light: Color(red:'+(lr.r/255).toFixed(3)+', green:'+(lr.g/255).toFixed(3)+', blue:'+(lr.b/255).toFixed(3)+'), dark: Color(red:'+(dr.r/255).toFixed(3)+', green:'+(dr.g/255).toFixed(3)+', blue:'+(dr.b/255).toFixed(3)+'))')});
+    lines.push('}');return lines.join('\n')
+  },
+  exportStyleDict(){
+    const out={color:{}};Object.entries(this.primitives).forEach(([n,sc])=>{out.color[n]={};Object.entries(sc).forEach(([s,h])=>{out.color[n][s]={value:h,$type:'color',comment:C.oklchCss(h)}})});
+    return JSON.stringify(out,null,2)
+  },
+  /* ── Render ── */
   render(){
-    const cont=document.getElementById('dsGroups');if(!cont)return;
-    if(!this.groups.length){cont.innerHTML='<div class="ds-empty">No token groups yet. Click "+ Group" to add one, or use "&#8592; From Palette".</div>';return}
-    cont.innerHTML='';
-    this.groups.forEach(g=>{
-      const gEl=document.createElement('div');gEl.className='ds-group';
-      const gh=document.createElement('div');gh.className='ds-gh';
-      const gn=document.createElement('input');gn.className='ds-gn';gn.value=g.name;gn.addEventListener('change',()=>this.updateGroupName(g.id,gn.value));
-      const ga=document.createElement('div');ga.className='ds-gacts';
-      const addBtn=document.createElement('button');addBtn.className='btn btn-g btn-sm';addBtn.textContent='+ Token';addBtn.addEventListener('click',()=>this.addToken(g.id));
-      const delBtn=document.createElement('button');delBtn.className='btn btn-g btn-sm';delBtn.textContent='Delete';delBtn.addEventListener('click',()=>{if(confirm('Delete group "'+g.name+'"?'))this.deleteGroup(g.id)});
-      ga.appendChild(addBtn);ga.appendChild(delBtn);gh.appendChild(gn);gh.appendChild(ga);
-      const tks=document.createElement('div');tks.className='ds-tokens';
-      if(!g.tokens.length){const em=document.createElement('div');em.className='ds-empty';em.style.padding='13px 0';em.textContent='No tokens yet.';tks.appendChild(em)}
-      else g.tokens.forEach(t=>{
-        const row=document.createElement('div');row.className='ds-tok';
-        const sw=document.createElement('div');sw.className='ds-sw';sw.style.background=t.baseHex;
-        const swEd=document.createElement('div');swEd.className='ds-sw-ed';swEd.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>';
-        sw.appendChild(swEd);sw.addEventListener('click',()=>Picker.open(t.baseHex,(hex)=>this.updateColor(t.id,hex),'Edit: '+t.name,sw));
-        const inf=document.createElement('div');inf.className='ds-info';
-        const tn=document.createElement('input');tn.className='ds-tn';tn.value=t.name;tn.addEventListener('change',()=>this.updateName(t.id,tn.value));
-        const th=document.createElement('div');th.className='ds-th';th.textContent=t.baseHex.toUpperCase();
-        const to=document.createElement('div');to.className='ds-to';to.textContent=C.oklchCss(t.baseHex);
-        inf.appendChild(tn);inf.appendChild(th);inf.appendChild(to);
-        const sc=document.createElement('div');sc.className='ds-scale';
-        t.scale.forEach((s,i)=>{
-          const sb=document.createElement('div');sb.className='ds-sb';sb.style.background=s.hex;
-          const tip=document.createElement('div');tip.className='ds-sb-tip';tip.textContent=(i+1)*100+' \u00b7 '+s.hex.toUpperCase();
-          sb.appendChild(tip);sb.addEventListener('click',()=>Picker.open(s.hex,(hex)=>{t.scale=C.redistributeScale(t.scale,i,hex,false);this.render()},'Shade: '+(i+1)*100,sb));
-          sc.appendChild(sb);
-        });
-        const del=document.createElement('button');del.className='ds-del';del.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>';
-        del.addEventListener('click',()=>this.deleteToken(t.id));
-        row.appendChild(sw);row.appendChild(inf);row.appendChild(sc);row.appendChild(del);tks.appendChild(row);
+    const cont=document.getElementById('dsGroups');if(!cont)return;cont.innerHTML='';
+    const hasPrim=Object.keys(this.primitives).length>0;
+    if(!hasPrim&&!this.semantics.length&&!this.components.length){cont.innerHTML='<div class="ds-empty">Generate a palette first, then click \u201c\u2190 Seed from Palette\u201d to build a full 3-tier token system \u2014 Primitives, Semantic, and Component tokens.</div>';return}
+    // Tier nav
+    const nav=document.createElement('div');nav.className='ds-tier-nav';
+    const tiers=[['primitive','Primitives ('+Object.keys(this.primitives).length+')'],['semantic','Semantic ('+this.semantics.length+')'],['component','Components ('+this.components.length+')']];
+    tiers.forEach(([t,lbl])=>{const btn=document.createElement('button');btn.className='ds-tier-btn'+(this._tier===t?' on':'');btn.textContent=lbl;btn.addEventListener('click',()=>{this._tier=t;this.render()});nav.appendChild(btn)});
+    cont.appendChild(nav);
+    // Context action bar
+    const bar=document.createElement('div');bar.style.cssText='display:flex;gap:7px;flex-wrap:wrap;margin-bottom:14px;align-items:center';
+    if(this._tier==='primitive'){
+      const lbl=document.createElement('span');lbl.style.cssText='font-family:var(--fm);font-size:.63rem;color:var(--text-3)';lbl.textContent='Scale:';
+      const sel=document.createElement('select');sel.className='sh-sel';
+      [['tailwind','Tailwind (50–950)'],['material','Material (0–100)'],['custom','Custom (100–1000)']].forEach(([v,l])=>{const o=document.createElement('option');o.value=v;o.textContent=l;if(this.scalePreset===v)o.selected=true;sel.appendChild(o)});
+      sel.addEventListener('change',e=>{this.scalePreset=e.target.value;if(St.pal.length){const names=Object.keys(this.primitives);St.pal.forEach((h,i)=>{if(names[i])this.primitives[names[i]]=this.generateScale(h)});['success:#22c55e','warning:#f59e0b','error:#ef4444','info:#3b82f6'].forEach(s=>{const[n,h]=s.split(':');if(this.primitives[n])this.primitives[n]=this.generateScale(h)})}this.render();toast('Scale: '+e.target.options[e.target.selectedIndex].text)});
+      bar.appendChild(lbl);bar.appendChild(sel);
+    }
+    const addBtn=document.createElement('button');addBtn.className='btn btn-g btn-sm';
+    addBtn.textContent=this._tier==='semantic'?'+ Semantic':this._tier==='component'?'+ Component':'+ Primitive';
+    addBtn.addEventListener('click',()=>{if(this._tier==='semantic')this.addSemantic();else if(this._tier==='component')this.addComponent();else this.addPrimitive()});
+    bar.appendChild(addBtn);
+    if(this._tier==='primitive'){
+      const expBtn=document.createElement('button');expBtn.className='btn btn-g btn-sm';expBtn.innerHTML='<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg> Export';
+      expBtn.addEventListener('click',()=>{document.getElementById('expCode').textContent=DS.exportTailwindV3();document.getElementById('expMo').classList.add('on');document.querySelectorAll('.exp-tab').forEach(b=>{b.classList.remove('on');if(b.dataset.et==='twv3')b.classList.add('on')})});
+      bar.appendChild(expBtn);
+    }
+    cont.appendChild(bar);
+    if(this._tier==='primitive')this._renderPrimitives(cont);
+    else if(this._tier==='semantic')this._renderSemantic(cont);
+    else this._renderComponents(cont);
+  },
+  _renderPrimitives(cont){
+    const wrap=document.createElement('div');wrap.className='ds-prim-wrap';
+    Object.entries(this.primitives).forEach(([name,scale])=>{
+      const row=document.createElement('div');row.className='ds-prim-row fi';
+      const hd=document.createElement('div');hd.className='ds-prim-hd';
+      const ni=document.createElement('input');ni.className='ds-prim-name-inp';ni.value=name;ni.title='Click to rename';
+      ni.addEventListener('change',()=>{const nn=ni.value.trim().toLowerCase().replace(/[^a-z0-9]+/g,'-');if(nn&&nn!==name){const old=this.primitives[name];delete this.primitives[name];this.primitives[nn]=old;this.render()}});
+      const del=document.createElement('button');del.className='ds-del';del.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M18 6L6 18M6 6l12 12"/></svg>';
+      del.addEventListener('click',()=>{if(confirm('Delete "'+name+'" primitive and all its shades?')){delete this.primitives[name];this.render()}});
+      hd.appendChild(ni);hd.appendChild(del);
+      const scEl=document.createElement('div');scEl.className='ds-prim-scale';
+      Object.entries(scale).forEach(([step,hex])=>{
+        const s=document.createElement('div');s.className='ds-prim-step';s.style.background=hex;s.title=name+'.'+step+' · '+hex.toUpperCase();
+        const lbl=document.createElement('div');lbl.className='ds-prim-lbl';lbl.textContent=step;s.appendChild(lbl);
+        s.addEventListener('click',()=>Picker.open(hex,nh=>{scale[step]=nh;this.render();toast('Updated '+name+'.'+step)},name+'.'+step,s));
+        scEl.appendChild(s);
       });
-      gEl.appendChild(gh);gEl.appendChild(tks);cont.appendChild(gEl);
+      row.appendChild(hd);row.appendChild(scEl);wrap.appendChild(row);
+    });
+    cont.appendChild(wrap);
+  },
+  _renderSemantic(cont){
+    const primOpts=this.getPrimOptions();
+    if(!primOpts.length){const em=document.createElement('div');em.className='ds-empty';em.textContent='Seed primitives first using \u201c\u2190 Seed from Palette\u201d or add them manually.';cont.appendChild(em);return}
+    const wrap=document.createElement('div');wrap.className='ds-sem-table';
+    const hdr=document.createElement('div');hdr.className='ds-sem-hdr';
+    ['Token Name','Light Value','Dark Value',''].forEach(t=>{const h=document.createElement('div');h.className='ds-sem-hdr-lbl';h.textContent=t;hdr.appendChild(h)});
+    wrap.appendChild(hdr);
+    this.semantics.forEach(s=>{
+      const row=document.createElement('div');row.className='ds-sem-row fi';
+      const ni=document.createElement('input');ni.className='ds-sem-name';ni.value=s.name;ni.addEventListener('change',()=>{s.name=ni.value});
+      const mkRef=(ref,mode,onChange)=>{const w=document.createElement('div');w.className='ds-ref-wrap';
+        const sw=document.createElement('div');sw.className='ds-ref-sw';sw.style.background=this.resolveRef(ref,mode);sw.title='Click to edit via picker';
+        sw.addEventListener('click',()=>Picker.open(this.resolveRef(ref,mode),nh=>{/* direct hex override stored in primitives if possible */toast(nh+' — select a primitive step to assign this')},mode+' value',sw));
+        const sel=document.createElement('select');sel.className='ds-ref-sel';
+        primOpts.forEach(opt=>{const o=document.createElement('option');o.value=opt;o.textContent=opt;if(ref===opt)o.selected=true;sel.appendChild(o)});
+        sel.addEventListener('change',e=>{onChange(e.target.value);sw.style.background=this.resolveRef(e.target.value,mode)});
+        w.appendChild(sw);w.appendChild(sel);return w};
+      const lRef=mkRef(s.lightRef,'light',v=>s.lightRef=v);
+      const dRef=mkRef(s.darkRef,'dark',v=>s.darkRef=v);
+      const del=document.createElement('button');del.className='ds-del';del.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M18 6L6 18M6 6l12 12"/></svg>';
+      del.addEventListener('click',()=>{this.semantics=this.semantics.filter(x=>x.id!==s.id);this.render()});
+      row.appendChild(ni);row.appendChild(lRef);row.appendChild(dRef);row.appendChild(del);wrap.appendChild(row);
+    });
+    cont.appendChild(wrap);
+  },
+  _renderComponents(cont){
+    const semOpts=this.getSemOptions();
+    if(!semOpts.length){const em=document.createElement('div');em.className='ds-empty';em.textContent='Add semantic tokens first before creating component tokens.';cont.appendChild(em);return}
+    const groups={};this.components.forEach(c=>{(groups[c.group]=groups[c.group]||[]).push(c)});
+    Object.entries(groups).forEach(([gname,items])=>{
+      const g=document.createElement('div');g.className='ds-comp-grp fi';
+      const gh=document.createElement('div');gh.className='ds-comp-grp-hd';
+      gh.innerHTML='<span class="ds-comp-grp-name">'+gname+'</span><span class="ds-comp-tag">'+items.length+' token'+(items.length>1?'s':'')+'</span>';
+      g.appendChild(gh);
+      items.forEach(c=>{
+        const row=document.createElement('div');row.className='ds-comp-row';
+        const ni=document.createElement('input');ni.className='ds-sem-name';ni.value=c.name;ni.addEventListener('change',()=>{c.name=ni.value});
+        const mkSemRef=(ref,mode,onChange)=>{const w=document.createElement('div');w.className='ds-ref-wrap';
+          const sw=document.createElement('div');sw.className='ds-ref-sw';sw.style.background=this.resolveRef(ref,mode);
+          const sel=document.createElement('select');sel.className='ds-ref-sel';
+          semOpts.forEach(opt=>{const o=document.createElement('option');o.value=opt;o.textContent=opt;if(ref===opt)o.selected=true;sel.appendChild(o)});
+          sel.addEventListener('change',e=>{onChange(e.target.value);sw.style.background=this.resolveRef(e.target.value,mode)});
+          w.appendChild(sw);w.appendChild(sel);return w};
+        const lRef=mkSemRef(c.lightRef,'light',v=>c.lightRef=v);
+        const dRef=mkSemRef(c.darkRef,'dark',v=>c.darkRef=v);
+        const del=document.createElement('button');del.className='ds-del';del.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M18 6L6 18M6 6l12 12"/></svg>';
+        del.addEventListener('click',()=>{this.components=this.components.filter(x=>x.id!==c.id);this.render()});
+        row.appendChild(ni);row.appendChild(lRef);row.appendChild(dRef);row.appendChild(del);g.appendChild(row);
+      });
+      cont.appendChild(g);
     });
   }
 };
@@ -963,14 +1212,19 @@ const UI={
   },
   exportCode(type){
     const p=St.pal;const r=St.roles;
-    if(type==='css')return':root {\n  /* Colour Crafter Pro */\n'+p.map((c,i)=>'  --color-'+r[i]+': '+c+'; /* contrast/white: '+C.contrast(c,'#ffffff').toFixed(2)+':1 */').join('\n')+'\n\n  /* OKLCH (CSS Level 4) */\n'+p.map((c,i)=>'  --color-'+r[i]+'-oklch: '+C.oklchCss(c)+';').join('\n')+'\n}';
+    if(type==='css')return':root {\n  /* Colour Crafter Pro — CSS Custom Properties */\n'+p.map((c,i)=>'  --color-'+r[i]+': '+c+'; /* contrast/white: '+C.contrast(c,'#ffffff').toFixed(2)+':1 */').join('\n')+'\n\n  /* OKLCH (CSS Level 4) */\n'+p.map((c,i)=>'  --color-'+r[i]+'-oklch: '+C.oklchCss(c)+';').join('\n')+'\n}';
+    if(type==='cssdark'){if(DS.semantics.length)return DS.exportCSSDark();const l=':root {\n  /* Light — Colour Crafter Pro */\n'+p.map((c,i)=>'  --color-'+r[i]+': '+c+';').join('\n')+'\n}';const d='[data-theme="dark"] {\n  /* Dark variants (auto-inverted) */\n'+p.map((c,i)=>{const rgb=C.hexToRgb(c);const hsl=C.rgbToHsl(rgb.r,rgb.g,rgb.b);const dark=C.hslToRgb(hsl.h,Math.max(0,hsl.s-10),Math.min(95,100-hsl.l));return'  --color-'+r[i]+': '+C.rgbToHex(dark.r,dark.g,dark.b)+';'}).join('\n')+'\n}';return l+'\n\n'+d}
     if(type==='scss')return p.map((c,i)=>'$color-'+r[i]+': '+c+'; // OKLCH: '+C.oklchCss(c)+' | contrast: '+C.contrast(c,'#ffffff').toFixed(2)+':1').join('\n');
-    if(type==='tailwind')return'/** @type {import(\'tailwindcss\').Config} */\nmodule.exports = {\n  theme: {\n    extend: {\n      colors: {\n'+p.map((c,i)=>"        '"+r[i]+"': '"+c+"',").join('\n')+'\n      }\n    }\n  }\n}';
-    if(type==='json')return JSON.stringify(p.reduce((a,c,i)=>{a[r[i]]={hex:c,oklch:C.oklchCss(c),rgb:C.hexToRgb(c)};return a},{}),null,2);
-    if(type==='w3c')return JSON.stringify(p.reduce((a,c,i)=>{a[r[i]]={'$value':c,'$type':'color','$description':C.oklchCss(c)};return a},{}),null,2);
+    if(type==='twv3'||type==='tailwind'){if(DS.primitives&&Object.keys(DS.primitives).length)return DS.exportTailwindV3();return'/** @type {import(\'tailwindcss\').Config} */\nmodule.exports = {\n  theme: {\n    extend: {\n      colors: {\n'+p.map((c,i)=>"        '"+r[i]+"': '"+c+"',").join('\n')+'\n      }\n    }\n  }\n}'}
+    if(type==='twv4'){if(DS.primitives&&Object.keys(DS.primitives).length)return DS.exportTailwindV4();return'@theme {\n  /* Colour Crafter Pro — Tailwind v4 */\n'+p.map((c,i)=>'  --color-'+r[i]+': '+c+';').join('\n')+'\n}'}
+    if(type==='figmatokens'){if(DS.primitives&&Object.keys(DS.primitives).length)return DS.exportFigmaTokens();const vs=p.map((c,i)=>{const rgb=C.hexToRgb(c);return{name:r[i],type:'COLOR',values:[{mode:'Default',value:{r:+(rgb.r/255).toFixed(4),g:+(rgb.g/255).toFixed(4),b:+(rgb.b/255).toFixed(4),a:1}}]}});return JSON.stringify({version:'0.0.1',collections:[{name:C.paletteName(p),modes:[{name:'Default'}],variables:vs}]},null,2)}
     if(type==='figma'){const vs=p.map((c,i)=>{const rgb=C.hexToRgb(c);return{name:r[i],type:'COLOR',values:[{mode:'Default',value:{r:+(rgb.r/255).toFixed(4),g:+(rgb.g/255).toFixed(4),b:+(rgb.b/255).toFixed(4),a:1}}]}});return JSON.stringify({version:'0.0.1',collections:[{name:C.paletteName(p),modes:[{name:'Default'}],variables:vs}]},null,2)}
-    if(type==='styledic'){if(DS.groups.length)return DS.exportStyleDict();const out={color:{}};p.forEach((c,i)=>{out.color[r[i]]={value:c,$type:'color',comment:C.oklchCss(c)}});return JSON.stringify(out,null,2)}
+    if(type==='w3c'){if(DS.primitives&&Object.keys(DS.primitives).length)return DS.exportW3C();return JSON.stringify(p.reduce((a,c,i)=>{a[r[i]]={'$value':c,'$type':'color','$description':C.oklchCss(c)};return a},{}),null,2)}
+    if(type==='styledic'){if(DS.primitives&&Object.keys(DS.primitives).length)return DS.exportStyleDict();const out={color:{}};p.forEach((c,i)=>{out.color[r[i]]={value:c,$type:'color',comment:C.oklchCss(c)}});return JSON.stringify(out,null,2)}
+    if(type==='json')return JSON.stringify(p.reduce((a,c,i)=>{a[r[i]]={hex:c,oklch:C.oklchCss(c),rgb:C.hexToRgb(c)};return a},{}),null,2);
     if(type==='oklch')return':root {\n'+p.map((c,i)=>'  --color-'+r[i]+': '+C.oklchCss(c)+';').join('\n')+'\n}\n\n@supports not (color: oklch(0 0 0)) {\n  :root {\n'+p.map((c,i)=>'    --color-'+r[i]+': '+c+';').join('\n')+'\n  }\n}';
+    if(type==='android'){if(DS.primitives&&Object.keys(DS.primitives).length)return DS.exportAndroidXML();const lines=['<?xml version="1.0" encoding="utf-8"?>','<resources>','  <!-- Colour Crafter Pro -->'];p.forEach((c,i)=>lines.push('  <color name="color_'+r[i]+'">#FF'+c.slice(1).toUpperCase()+'</color>'));lines.push('</resources>');return lines.join('\n')}
+    if(type==='ios'){if(DS.primitives&&Object.keys(DS.primitives).length)return DS.exportIOSSwift();const lines=['// Colour Crafter Pro','import SwiftUI','','extension Color {'];p.forEach((c,i)=>{const rgb=C.hexToRgb(c);lines.push('  static let '+r[i]+' = Color(red: '+(rgb.r/255).toFixed(4)+', green: '+(rgb.g/255).toFixed(4)+', blue: '+(rgb.b/255).toFixed(4)+')')});lines.push('}');return lines.join('\n')}
     return'';
   },
   autofix(){
@@ -981,7 +1235,74 @@ const UI={
     fixes.forEach(fix=>{const card=document.createElement('div');card.className='af-card';card.innerHTML='<div style="font-size:.71rem;color:var(--text-3);margin-bottom:3px">Colour '+(fix.i+1)+' \u2014 '+St.roles[fix.i]+'</div><div class="fix-cmp"><div class="fix-s" style="background:'+fix.orig+';color:'+fix.bg+'">Aa</div><div style="align-self:center;color:var(--text-3)">\u2192</div><div class="fix-s" style="background:'+fix.fixed+';color:'+fix.bg+'">Aa</div></div><div style="font-size:.68rem;color:var(--text-2)">'+fix.orig+' \u2192 '+fix.fixed+'</div><span class="fix-b pass">'+fix.ratio.toFixed(2)+':1 \u2713 AA</span>';grid.appendChild(card)});
     document.getElementById('afPanel').classList.add('on');
   },
-  applyFixes(){if(!St.fixes)return;const p=[...St.pal];St.fixes.forEach(f=>p[f.i]=f.fixed);St.pal=p;St.push(p);this.render();document.getElementById('afPanel').classList.remove('on');toast('Accessibility fixes applied \u2713')}
+  applyFixes(){if(!St.fixes)return;const p=[...St.pal];St.fixes.forEach(f=>p[f.i]=f.fixed);St.pal=p;St.push(p);this.render();document.getElementById('afPanel').classList.remove('on');toast('Accessibility fixes applied \u2713')},
+  matrix(){
+    const cont=document.getElementById('matrixWrap');if(!cont)return;
+    const p=St.pal;if(!p.length){cont.innerHTML='<p style="color:var(--text-3);font-size:.82rem">Generate a palette first.</p>';return}
+    const cols=[...p,'#ffffff','#0a0a0f'];
+    const lbls=[...St.roles,'White','Near Black'];
+    let html='<div class="cx-scroll"><table class="cx-table"><thead><tr><th></th>';
+    cols.forEach((c,i)=>{html+='<th><span class="cx-dot" style="background:'+c+';border:1px solid '+(C.luminance(c)>.9?'var(--border)':'transparent')+'"></span>'+lbls[i]+'</th>'});
+    html+='</tr></thead><tbody>';
+    cols.forEach((c1,i)=>{
+      html+='<tr><th><span class="cx-dot" style="background:'+c1+';border:1px solid '+(C.luminance(c1)>.9?'var(--border)':'transparent')+'"></span>'+lbls[i]+'</th>';
+      cols.forEach((c2,j)=>{
+        if(i===j){html+='<td class="cx-self">&#8212;</td>'}
+        else{const r=C.contrast(c1,c2);const cls=r>=7?'cx-aaa':r>=4.5?'cx-aa':r>=3?'cx-aala':'cx-fail';const lbl=r>=7?'AAA':r>=4.5?'AA':r>=3?'AA\u2197':'Fail';html+='<td class="'+cls+'" title="Click to copy" data-copy="'+r.toFixed(2)+':1 ('+c1+' on '+c2+')"><strong>'+r.toFixed(1)+'</strong>:1<br><small>'+lbl+'</small></td>'}
+      });
+      html+='</tr>';
+    });
+    html+='</tbody></table></div>';
+    html+='<p style="font-size:.7rem;color:var(--text-3);margin-top:9px;line-height:1.6">AAA ≥ 7:1 &nbsp;·&nbsp; AA ≥ 4.5:1 &nbsp;·&nbsp; AA Large ≥ 3:1 &nbsp;·&nbsp; Click any cell to copy. White (#FFFFFF) and Near Black (#0A0A0F) included as standard reference points.</p>';
+    cont.innerHTML=html;
+    cont.querySelectorAll('[data-copy]').forEach(td=>td.addEventListener('click',()=>copyText(td.dataset.copy)));
+  },
+  preview(){
+    const cont=document.getElementById('previewWrap');if(!cont)return;
+    const p=St.pal;if(!p.length){cont.innerHTML='<p style="color:var(--text-3);font-size:.82rem">Generate a palette first.</p>';return}
+    const primary=p[0],secondary=p[1]||p[0],accent=p[2]||p[0];
+    const bgL=p[3]||'#f8f7f4',bgD='#0a0a0f';
+    const textL=C.textOnBg(bgL),textD=C.textOnBg(bgD);
+    const mkCard=(bg,isLight)=>{
+      const text=C.textOnBg(bg);const borderCol=C.luminance(bg)>.85?'rgba(10,10,15,.1)':'rgba(255,255,255,.1)';
+      const subtext=C.luminance(bg)>.5?'rgba(10,10,15,.6)':'rgba(255,255,255,.6)';
+      const borderInput=C.luminance(bg)>.5?primary+'88':primary+'aa';
+      return`<div class="prev-card fi" style="background:${bg};border:1px solid ${borderCol}">
+        <div class="prev-card-body">
+          <span class="prev-badge" style="background:${primary};color:${C.textOnBg(primary)}">${isLight?'Light Mode':'Dark Mode'}</span>
+          <div class="prev-h1" style="color:${text}">Design system in action.</div>
+          <div class="prev-p" style="color:${subtext}">Every token from primitive through semantic to component, rendered live with your current palette.</div>
+          <div class="prev-btns">
+            <button class="prev-btn-p" style="background:${primary};color:${C.textOnBg(primary)}">Primary CTA</button>
+            <button class="prev-btn-s" style="color:${primary};border-color:${primary}">Secondary</button>
+          </div>
+          <input class="prev-input" style="border-color:${borderInput};color:${text};background:transparent" placeholder="Text input field" readonly>
+          <div class="prev-chip-row">
+            ${p.slice(0,4).map((c,i)=>`<span class="prev-chip" style="background:${c}22;color:${c};border-color:${c}44">${St.roles[i]||'role '+(i+1)}</span>`).join('')}
+          </div>
+        </div>
+      </div>`;
+    };
+    let html='<div class="prev-grid">'+mkCard(bgL,true)+mkCard(bgD,false)+'</div>';
+    cont.innerHTML=html;
+    // Component showcase
+    const show=document.createElement('div');
+    show.innerHTML=`<div class="sec-h" style="margin-top:18px">Palette as UI Components</div>
+      <div class="prev-comp-showcase">
+        <div style="font-family:var(--fm);font-size:.6rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-3);margin-bottom:2px">Filled Buttons</div>
+        <div class="prev-comp-row">${p.map((c,i)=>`<button style="padding:8px 16px;background:${c};color:${C.textOnBg(c)};border:none;border-radius:7px;font-size:.78rem;font-weight:600;cursor:default;flex-shrink:0">${St.roles[i]||'colour '+(i+1)}</button>`).join('')}</div>
+        <div style="font-family:var(--fm);font-size:.6rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-3);margin-bottom:2px">Status Badges / Chips</div>
+        <div class="prev-comp-row">${p.map((c,i)=>`<span style="padding:3px 11px;border-radius:100px;background:${c}22;color:${c};border:1px solid ${c}44;font-size:.72rem;font-weight:600;white-space:nowrap">${St.roles[i]||'label '+(i+1)}</span>`).join('')}</div>
+        <div style="font-family:var(--fm);font-size:.6rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-3);margin-bottom:2px">Colour Scale Preview</div>
+        <div class="prev-comp-row" style="gap:3px;flex-wrap:nowrap;overflow-x:auto">${p.map(c=>`<div style="flex:1;min-width:36px;height:44px;border-radius:6px;background:${c};display:flex;align-items:flex-end;justify-content:center;padding-bottom:4px;cursor:default"><span style="font-family:var(--fm);font-size:.52rem;color:${C.textOnBg(c)};mix-blend-mode:difference">${c.toUpperCase()}</span></div>`).join('')}</div>
+        <div style="padding:14px;background:${p[3]||'#f8f7f4'};border-radius:10px;border:1px solid ${p[0]}22">
+          <div style="font-family:var(--fd);font-size:.95rem;font-weight:800;color:${C.textOnBg(p[3]||'#f8f7f4')};margin-bottom:4px">Card Component</div>
+          <div style="font-size:.78rem;color:${C.textOnBg(p[3]||'#f8f7f4')};opacity:.75;margin-bottom:10px;line-height:1.5">Using your background and text tokens on a real card — this is what your design system produces.</div>
+          <button style="padding:7px 14px;background:${p[0]};color:${C.textOnBg(p[0])};border:none;border-radius:6px;font-size:.78rem;font-weight:600;cursor:default">Primary Action</button>
+        </div>
+      </div>`;
+    cont.appendChild(show);
+  }
 };
 
 const Img={
@@ -1034,7 +1355,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   document.querySelectorAll('[data-mode]').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('[data-mode]').forEach(b=>b.classList.remove('on'));btn.classList.add('on');St.mode=btn.dataset.mode})});
 
   // Intent pills
-  document.querySelectorAll('[data-intent]').forEach(btn=>{btn.addEventListener('click',()=>{const was=btn.classList.contains('on');document.querySelectorAll('[data-intent]').forEach(b=>b.classList.remove('on'));const lbl=document.getElementById('intLbl');if(!was){btn.classList.add('on');St.intent=btn.dataset.intent;lbl.textContent='Active: '+btn.textContent;if(St.pal.length){St.pal=C.applyIntent(St.pal,St.intent);UI.render()}}else{St.intent=null;lbl.textContent=''}})});
+  document.querySelectorAll('[data-intent]').forEach(btn=>{btn.addEventListener('click',()=>{const was=btn.classList.contains('on');document.querySelectorAll('[data-intent]').forEach(b=>b.classList.remove('on'));const lbl=document.getElementById('intLbl');if(!was){btn.classList.add('on');St.intent=btn.dataset.intent;const desc=C.intentDesc[St.intent]||'';lbl.textContent=desc;if(St.pal.length){St.pal=C.applyIntent(St.pal,St.intent);St.push(St.pal);UI.render()}toast(desc||btn.textContent.trim())}else{St.intent=null;lbl.textContent=''}})});
 
   // Adjust pills
   document.querySelectorAll('[data-adj]').forEach(btn=>{btn.addEventListener('click',()=>{St.pal=C.adjust(St.pal,btn.dataset.adj);St.push(St.pal);UI.render();toast(btn.textContent.trim())})});
@@ -1063,7 +1384,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   document.getElementById('exHd').addEventListener('click',()=>{St.exOpen=!St.exOpen;document.getElementById('exBody').classList.toggle('hide',!St.exOpen);document.getElementById('exChev').classList.toggle('open',St.exOpen)});
 
   // Tabs
-  document.querySelectorAll('.tab-btn').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('on'));document.querySelectorAll('.tab-pane').forEach(p=>p.classList.remove('on'));btn.classList.add('on');document.getElementById('tab-'+btn.dataset.tab).classList.add('on');if(btn.dataset.tab==='history')UI.history();if(btn.dataset.tab==='shades'){UI.updShSel();UI.shades()}if(btn.dataset.tab==='grads')UI.gradient()})});
+  document.querySelectorAll('.tab-btn').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('on'));document.querySelectorAll('.tab-pane').forEach(p=>p.classList.remove('on'));btn.classList.add('on');document.getElementById('tab-'+btn.dataset.tab).classList.add('on');if(btn.dataset.tab==='history')UI.history();if(btn.dataset.tab==='shades'){UI.updShSel();UI.shades()}if(btn.dataset.tab==='grads')UI.gradient();if(btn.dataset.tab==='matrix')UI.matrix();if(btn.dataset.tab==='preview')UI.preview()})});
 
   // CB
   document.getElementById('cbSel').addEventListener('change',e=>{St.cbType=e.target.value;UI.cb()});
@@ -1078,24 +1399,43 @@ document.addEventListener('DOMContentLoaded',()=>{
   document.getElementById('lrTog').addEventListener('click',()=>{St.lockRatio=!St.lockRatio;document.getElementById('lrTog').classList.toggle('on',St.lockRatio);toast(St.lockRatio?'Lock Ratio ON':'Lock Ratio OFF')});
 
   // Design System
-  document.getElementById('dsFromPal').addEventListener('click',()=>{DS.initFromPalette(St.pal,St.roles);toast('Design system seeded \u2713')});
-  document.getElementById('dsAddGrp').addEventListener('click',()=>DS.addGroup());
-  document.getElementById('dsSave').addEventListener('click',()=>{const data=DS.toJSON();const blob=new Blob([data],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='colour-system.json';a.click();URL.revokeObjectURL(a.href);toast('Saved \u2713')});
+  document.getElementById('dsFromPal').addEventListener('click',()=>{DS.initFromPalette(St.pal,St.roles);toast('3-tier design system seeded \u2713')});
+  document.getElementById('dsAddTok').addEventListener('click',()=>{if(DS._tier==='semantic')DS.addSemantic();else if(DS._tier==='component')DS.addComponent();else DS.addPrimitive()});
+  document.getElementById('dsSave').addEventListener('click',()=>{const data=DS.toJSON();const blob=new Blob([data],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='colour-system-v2.json';a.click();URL.revokeObjectURL(a.href);toast('Saved \u2713')});
   document.getElementById('dsLoad').addEventListener('change',e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=ev=>DS.fromJSON(ev.target.result);r.readAsText(f);e.target.value=''});
 
-  // Share
-  document.getElementById('shareBtn').addEventListener('click',()=>{const colors=St.pal.map(c=>c.replace('#','')).join('-');copyText(location.origin+location.pathname+'?p='+colors);toast('Share link copied!')});
+  // Share — encodes palette + full DS state
+  document.getElementById('shareBtn').addEventListener('click',()=>{
+    const colors=St.pal.map(c=>c.replace('#','')).join('-');
+    let url=location.origin+location.pathname+'?p='+colors;
+    const haDS=DS.primitives&&Object.keys(DS.primitives).length>0;
+    if(haDS){try{const enc=btoa(encodeURIComponent(JSON.stringify({primitives:DS.primitives,semantics:DS.semantics,components:DS.components,scalePreset:DS.scalePreset})));url+='&ds='+enc}catch(e){}}
+    copyText(url);toast(haDS?'Share link copied — includes full design system!':'Share link copied!');
+  });
 
   // History btn
   document.getElementById('histBtn').addEventListener('click',()=>{document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('on'));document.querySelectorAll('.tab-pane').forEach(p=>p.classList.remove('on'));document.querySelector('[data-tab="history"]').classList.add('on');document.getElementById('tab-history').classList.add('on');UI.history();document.getElementById('tab-history').scrollIntoView({behavior:'smooth',block:'start'})});
 
-  // Export
+  // Export hub
   let curEt='css';
   document.getElementById('expBtn').addEventListener('click',()=>{document.getElementById('expCode').textContent=UI.exportCode(curEt);document.getElementById('expMo').classList.add('on')});
   document.getElementById('expMoClose').addEventListener('click',()=>document.getElementById('expMo').classList.remove('on'));
   document.getElementById('expMo').addEventListener('click',e=>{if(e.target===e.currentTarget)e.currentTarget.classList.remove('on')});
   document.querySelectorAll('.exp-tab').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('.exp-tab').forEach(b=>b.classList.remove('on'));btn.classList.add('on');curEt=btn.dataset.et;document.getElementById('expCode').textContent=UI.exportCode(curEt)})});
   document.getElementById('expCp').addEventListener('click',()=>copyText(document.getElementById('expCode').textContent));
+
+  // Shades preset + direct export
+  document.getElementById('shPreset').addEventListener('change',e=>{DS.scalePreset=e.target.value;UI.shades()});
+  document.getElementById('shExportBtn').addEventListener('click',()=>{
+    if(!St.shades||!St.shades.length){toast('Generate shades first');return}
+    const preset=document.getElementById('shPreset').value;
+    const steps={tailwind:[50,100,200,300,400,500,600,700,800,900,950],material:[0,10,20,30,40,50,60,70,80,90,95,99,100],custom:[100,200,300,400,500,600,700,800,900,1000]}[preset]||[100,200,300,400,500,600,700,800,900,1000];
+    const name=St.roles[St.shIdx]||'color';
+    const lines=[':root {','  /* Tonal Scale — '+name+' ('+preset+' naming) */'];
+    St.shades.slice(0,steps.length).forEach((s,i)=>lines.push('  --'+name+'-'+steps[i]+': '+s.hex+'; /* '+C.oklchCss(s.hex)+' */'));
+    lines.push('}');
+    const blob=new Blob([lines.join('\n')],{type:'text/css'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name+'-scale.css';a.click();URL.revokeObjectURL(a.href);toast('Scale exported as CSS \u2713');
+  });
 
   // Shortcuts
   document.getElementById('scMoClose').addEventListener('click',()=>document.getElementById('scMo').classList.remove('on'));
@@ -1116,9 +1456,11 @@ document.addEventListener('DOMContentLoaded',()=>{
   // Keyboard shortcuts
   document.addEventListener('keydown',e=>{if(e.target.matches('input,textarea,select'))return;if(e.code==='Space'){e.preventDefault();generate()}if(e.ctrlKey&&e.key==='z'){e.preventDefault();St.undo()}if(e.ctrlKey&&e.key==='y'){e.preventDefault();St.redo()}if(e.ctrlKey&&e.key==='e'){e.preventDefault();document.getElementById('expBtn').click()}if(e.key==='?')document.getElementById('scMo').classList.add('on');if(e.key==='d'&&!e.ctrlKey)document.getElementById('themeBtn').click();if(e.key==='Escape'){document.getElementById('expMo').classList.remove('on');document.getElementById('scMo').classList.remove('on');document.getElementById('pkOv').classList.remove('on');closeSB()}});
 
-  // Load from URL
+  // Load from URL — restores palette and full design system state
   const up=new URLSearchParams(location.search);const pp=up.get('p');
   if(pp){const cs=pp.split('-').map(c=>'#'+c);if(cs.length===5&&cs.every(c=>/^#[0-9A-Fa-f]{6}$/.test(c))){St.pal=cs;St.push(cs);UI.render();toast('Palette loaded from link \u2713')}}
+  const dsp=up.get('ds');
+  if(dsp){try{const decoded=JSON.parse(decodeURIComponent(atob(dsp)));DS.primitives=decoded.primitives||{};DS.semantics=decoded.semantics||[];DS.components=decoded.components||[];DS.scalePreset=decoded.scalePreset||'tailwind';if(document.querySelector('[data-tab="system"]').classList.contains('on'))DS.render();toast('Design system restored from link \u2713')}catch(e){}}
 });
 </script>
 </body>
